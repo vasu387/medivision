@@ -1,0 +1,65 @@
+.signupimage{
+  background-image: url('../Imagehome/signupb.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust height as needed */
+}
+
+.form-card {
+  width: 300px; /* Adjust width as needed */
+  padding: 20px;
+  border: 1px solid #e6e2e2;
+  border-radius: 5px;
+  background-color: rgba(173, 216, 230, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #fbf6f6;
+  border-radius: 3px;
+}
+
+.input-group input[type="checkbox"] {
+  width: auto;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #097bec;
+  color: #f40a0a;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.loader {
+  /* Styles for loader */
+}

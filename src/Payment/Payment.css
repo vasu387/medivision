@@ -1,0 +1,72 @@
+.playmentimage {
+  background-image:url('../Imagehome/illustrationmedi.png'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensures the background covers the entire viewport height */
+}
+
+.payment-container {
+  
+}
+.pay1{
+  color: black;
+  font-size: xx-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.card1{
+  color: black;
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Add any additional styles as needed */
+
+.payment-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid yellowgreen;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px yellowgreen;
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-container form {
+  display: flex;
+  flex-direction: column;
+  color: #007bff;
+}
+
+.payment-container label {
+  margin-bottom: 10px;
+}
+
+.payment-container input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.payment-container .button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.payment-container button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.payment-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
