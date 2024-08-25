@@ -1,18 +1,10 @@
-.description{
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  
- 
-}
-
+/* General styles */
 .header {
-  
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:bisque;
+  background-color: bisque;
 }
 
 .logo {
@@ -24,7 +16,6 @@
   margin-right: 9px;
 }
 
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -35,40 +26,419 @@ nav ul li {
   display: inline-block;
   margin-left: 30px;
 }
-nav ul li :hover{
-color: rgb(248, 242, 242);
-}
 
 nav ul li button {
   background-color: transparent;
   border: none;
   padding: 5px 7px;
   cursor: pointer;
-  color:rgb(7, 7, 7);
-  
-} 
+  color: rgb(7, 7, 7);
+}
 
+.ti {
+  color: rgb(12, 12, 12);
+}
 
+/* Content and Slideshow Layout */
+.content-slideshow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+
+.content {
+  flex: 1.5;
+  padding-bottom: 50px;
+  padding-right: 20px;
+}
 
 .section-heading {
   font-size: 40px;
+  padding-bottom: 30px;
   font-weight: bolder;
-  padding-left: 5%;
-  padding-top: 10%;
   color: rgb(12, 12, 11);
-
 }
 
 .description {
   font-size: 20px;
   line-height: 1.5;
-color: yellowgreen;
-padding-left: 15%;
+  color: black;
   max-width: 600px;
-  
-
 }
 
-.ti{
-  color:rrgb(12, 12, 12)
+.image-slideshow {
+  flex: 1.3;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mySlides {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* News Grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.news-box {
+  background-color: blanchedalmond;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.news-box h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.news-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Meditation Audio Section */
+.meditation-audio {
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.meditation-audio h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.audio-control {
+  background-color:white;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 1500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: 20px; /* Add space above the control */
+}
+
+/* Individual audio sections */
+.audio-control .audionames1,
+.audio-control .audionames2,
+.audio-control .audionames3,
+.audio-control .audionames4
+ {
+  background-color:blanchedalmond; 
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.audio-control .audionames1 h3,
+.audio-control .audionames2 h3,
+.audio-control .audionames3 h3,
+.audio-control .audionames4 h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.audio-control .audionames1 p,
+.audio-control .audionames2 p ,
+.audio-control .audionames3 p,
+.audio-control .audionames4 p {
+  font-size: 16px;
+}
+
+/* Custom audio player styles */
+audio {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+
+audio::-webkit-media-controls-panel {
+  border-radius: 8px;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #ff8c00;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #ff8c00;
+}
+
+audio::-webkit-media-controls-volume-control {
+  background-color: #ff8c00;
+  border-radius: 5px;
+}
+
+audio::-webkit-media-controls-mute-button {
+  background-color: #ff8c00;
+}
+
+/* Footer styles */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: blanchedalmond;
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: black;
+}
+
+.footer .social a {
+  font-size: 24px;
+  color: black;
+  border: 2px solid orangered;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+  transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-10px);
+  color: orangered;
+  border: 2px solid orangered;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul li a {
+  color: black;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+  border-bottom: 3px solid orangered;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+}
+
+/* Responsive Styles */
+/* Existing Responsive Styles */
+/* Desktop and Large Tablets (1200px and below) */
+@media (max-width: 1200px) {
+  .section-heading {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets and Larger Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 28px;
+    padding-top: 5%;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .social a {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+  }
+
+  .footer ul li {
+    padding: 0 10px;
+  }
+
+  .footer ul li a {
+    font-size: 16px;
+  }
+
+  .audio-control {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+/* Small Tablets and Large Mobile Devices (600px and below) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .content-slideshow-container {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .news-box {
+    padding: 15px;
+  }
+
+  .meditation-audio h1 {
+    font-size: 24px;
+  }
+
+  .audio-control .audionames1,
+  .audio-control .audionames2,
+  .audio-control .audionames3,
+  .audio-control .audionames4 {
+    padding: 10px;
+  }
+}
+
+/* Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .header {
+    padding: 8px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .news-box {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer .social a {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+  }
+
+  .footer ul li a {
+    font-size: 14px;
+  }
+
+  .audio-control {
+    padding: 10px;
+  }
+}
+
+/* Extra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .header {
+    padding: 5px;
+  }
+
+  .section-heading {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .news-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .news-box p {
+    font-size: 0.8rem;
+  }
+
+  .footer .social a {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+  }
+
+  .footer ul li a {
+    font-size: 12px;
+  }
+
+  .audio-control {
+    padding: 5px;
+  }
 }

@@ -82,4 +82,4 @@ const Center = () => {
   );
 };
 
-export default Center:
+export default Center;
