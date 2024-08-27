@@ -13,6 +13,7 @@ import './Home.css';
 const Home = () => {
   const navigate = useNavigate();
   const [myIndex, setMyIndex] = useState(0);
+  const [isNavVisible, setIsNavVisible] = useState(false); // State to manage navbar visibility
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,13 +35,22 @@ const Home = () => {
     navigate(path);
   };
 
+  const toggleNavVisibility = () => {
+    setIsNavVisible(!isNavVisible); // Toggle navbar visibility
+  };
+
+
   return (
     <div>
-      <header className="header">
-        <div className="logo">
-          <img src={logo} alt="logo" width="85" height="62" />
-          <h1 className="ti">MEDIVISION</h1>
-        </div>
+    <header className="header">
+      <div className="logo">
+        <img src={logo} alt="logo" width="85" height="62" />
+        <h1 className="ti">MEDIVISION</h1>
+      </div>
+      <button className="menu-btn" onClick={toggleNavVisibility}>
+        &#9776; {/* Menu icon (hamburger) */}
+      </button>
+      {isNavVisible && (
         <nav>
           <ul>
             <li><button onClick={() => handleClick("/shopping")}>Shopping</button></li>
@@ -53,7 +63,8 @@ const Home = () => {
             <li><button onClick={() => handleClick("/signin")}>Sign in</button></li>
           </ul>
         </nav>
-      </header>
+      )}
+    </header>
 
       <div className="content-slideshow-container">
         <div className="content">

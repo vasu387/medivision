@@ -249,6 +249,7 @@ audio::-webkit-media-controls-mute-button {
   color: black;
   border-bottom: 3px solid transparent;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 
 .footer ul li a:hover {
@@ -261,10 +262,34 @@ audio::-webkit-media-controls-mute-button {
   font-size: 12px;
   color: black;
 }
+/* Styles for menu button */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  display: none; /* Hidden by default */
+}
 
-/* Responsive Styles */
-/* Existing Responsive Styles */
-/* Desktop and Large Tablets (1200px and below) */
+/* Show the menu button on smaller screens */
+@media (max-width: 426px) {
+  .menu-btn {
+    display: flex;
+    position: absolute;
+    left: 80%;
+    top: -0.5%;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.show-nav {
+    display: block;
+  }
+}
+
 @media (max-width: 1200px) {
   .section-heading {
     font-size: 36px;

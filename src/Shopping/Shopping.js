@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Shopping.css';
 import ima1 from '../Imagehome/medi1.webp';
-import ima2 from '../Imagehome/medi2.jpg';
+import ima2 from '../Imagehome/medi2sized.jpg';
 import ima3 from '../Imagehome/medi3.jpeg';
 import ima4 from '../Imagehome/medi4.jpeg';
 import ima5 from '../Imagehome/medi5.jpeg';
@@ -15,7 +15,6 @@ import ima12 from '../Imagehome/medi12.jpg';
 import { useNavigate } from 'react-router-dom';
 
 function Shopping() {
-    
   const [cart, setCart] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -71,32 +70,30 @@ function Shopping() {
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  //const checkout = () => {
-    //alert('Your Order is ready to place');
-  //};
   const navi = useNavigate();
-    const handlepay =()=>
-    {
-        navi("/payment")
-    }
+  const handlepay = () => {
+    navi("/payment");
+  };
 
   return (
     <div className="page">
-      <h1 className='shophead'>MediShopping🛒 </h1>
-      <input
-        type="text"
-        placeholder="Search for products🔍"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
-      <h2 style={{ textAlign: 'center' }}>Meditation Products</h2>
+      <h1 className='shophead'>MediShopping🛒</h1>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search for products🔍"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+      <h2 style={{ textAlign: 'center', marginTop: '20px' }}>Meditation Products</h2>
       <div className="product-container">
         {filteredProducts.map((product) => (
           <div className="product-card" key={product.name}>
             <div className="product-item">
               <img src={product.image} alt={product.name} />
-              <h2>{product.name}</h2>
-              <p>Price: ₹{product.price}</p>
+              <h3>{product.name}</h3>
+              <p className="price">₹{product.price}</p>
               <button onClick={() => addToCart(product)}>Add to Cart</button>
             </div>
           </div>
@@ -120,7 +117,7 @@ function Shopping() {
             </div>
           </div>
         ))}
-        {cart.length > 0 && <button onClick={handlepay}>Checkout</button>}
+        {cart.length > 0 && <button className="checkout-button" onClick={handlepay}>Checkout</button>}
         {cart.length === 0 && <p>Cart is empty</p>}
       </div>
     </div>
