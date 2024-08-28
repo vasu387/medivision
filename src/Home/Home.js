@@ -54,6 +54,7 @@ const Home = () => {
           </ul>
         </nav>
       </header>
+      
 
       <div className="content-slideshow-container">
         <div className="content">
