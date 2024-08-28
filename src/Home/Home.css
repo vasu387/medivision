@@ -39,7 +39,7 @@ nav ul li button {
   color: rgb(12, 12, 12);
 }
 
-/* Content and Slideshow Layout */
+
 .content-slideshow-container {
   display: flex;
   justify-content: space-between;
@@ -79,7 +79,7 @@ nav ul li button {
   object-fit: cover;
 }
 
-/* News Grid */
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -108,7 +108,7 @@ nav ul li button {
   color: #333;
 }
 
-/* Meditation Audio Section */
+
 .meditation-audio {
   padding: 40px;
   background: white;
@@ -134,7 +134,7 @@ nav ul li button {
   margin-top: 20px; /* Add space above the control */
 }
 
-/* Individual audio sections */
+
 .audio-control .audionames1,
 .audio-control .audionames2,
 .audio-control .audionames3,
@@ -143,7 +143,7 @@ nav ul li button {
   background-color:blanchedalmond; 
   border-radius: 8px;
   padding: 15px;
-  margin-bottom: 20px; /* Space between sections */
+  margin-bottom: 20px; 
 }
 
 .audio-control .audionames1 h3,
@@ -195,7 +195,7 @@ audio::-webkit-media-controls-mute-button {
   background-color: #ff8c00;
 }
 
-/* Footer styles */
+
 .footer {
   position: relative;
   bottom: 0;
@@ -249,7 +249,6 @@ audio::-webkit-media-controls-mute-button {
   color: black;
   border-bottom: 3px solid transparent;
   transition: 0.3s ease;
-  text-decoration: none;
 }
 
 .footer ul li a:hover {
@@ -262,34 +261,6 @@ audio::-webkit-media-controls-mute-button {
   font-size: 12px;
   color: black;
 }
-/* Styles for menu button */
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-  display: none; /* Hidden by default */
-}
-
-/* Show the menu button on smaller screens */
-@media (max-width: 426px) {
-  .menu-btn {
-    display: flex;
-    position: absolute;
-    left: 80%;
-    top: -0.5%;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  nav ul.show-nav {
-    display: block;
-  }
-}
-
 @media (max-width: 1200px) {
   .section-heading {
     font-size: 36px;
@@ -304,7 +275,7 @@ audio::-webkit-media-controls-mute-button {
   }
 }
 
-/* Tablets and Larger Mobile Devices (768px and below) */
+
 @media (max-width: 768px) {
   .section-heading {
     font-size: 28px;
@@ -341,7 +312,6 @@ audio::-webkit-media-controls-mute-button {
   }
 }
 
-/* Small Tablets and Large Mobile Devices (600px and below) */
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
@@ -390,7 +360,7 @@ audio::-webkit-media-controls-mute-button {
   }
 }
 
-/* Small Mobile Devices (480px and below) */
+
 @media (max-width: 480px) {
   .header {
     padding: 8px;
@@ -430,7 +400,6 @@ audio::-webkit-media-controls-mute-button {
   }
 }
 
-/* Extra Small Devices (320px and below) */
 @media (max-width: 320px) {
   .header {
     padding: 5px;
