@@ -13,6 +13,7 @@ import './Home.css';
 const Home = () => {
   const navigate = useNavigate();
   const [myIndex, setMyIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,29 +33,31 @@ const Home = () => {
 
   const handleClick = (path) => {
     navigate(path);
+    setMenuOpen(false);
   };
 
   return (
     <div>
-      <header className="header">
-        <div className="logo">
-          <img src={logo} alt="logo" width="85" height="62" />
-          <h1 className="ti">MEDIVISION</h1>
+      <header className="custom-navbar">
+        <div className="custom-logo-title">
+          <img src={logo} alt="logo" width="60" />
+          <h1 className="custom-title">MEDIVISION</h1>
         </div>
-        <nav>
-          <ul>
-            <li><button onClick={() => handleClick("/shopping")}>Shopping</button></li>
-            <li><button onClick={() => alert("You are on the Home page. Thank you!")}>Home</button></li>
-            <li><button onClick={() => handleClick("/types")}>Meditation</button></li>
-            <li><button onClick={() => handleClick("/center")}>Guide</button></li>
-            <li><button onClick={() => handleClick("/contact")}>Contact</button></li>
-            <li><button onClick={() => handleClick("/Timer")}>Timer</button></li>
-            <li><button onClick={() => handleClick("/demosignup")}>Sign up</button></li>
-            <li><button onClick={() => handleClick("/signin")}>Sign in</button></li>
-          </ul>
-        </nav>
+        <div className="hamburger-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul className={`custom-nav-links ${menuOpen ? "show" : ""}`}>
+          <li><button onClick={() => handleClick("/shopping")}>Shopping</button></li>
+          <li><button onClick={() => alert("You are on the Home page.")}>Home</button></li>
+          <li><button onClick={() => handleClick("/types")}>Meditation</button></li>
+          <li><button onClick={() => handleClick("/center")}>Guide</button></li>
+          <li><button onClick={() => handleClick("/contact")}>Contact</button></li>
+          <li><button onClick={() => handleClick("/Timer")}>Timer</button></li>
+          <li><button onClick={() => handleClick("/demosignup")}>Sign up</button></li>
+        </ul>
       </header>
-      
 
       <div className="content-slideshow-container">
         <div className="content">
@@ -90,7 +93,7 @@ const Home = () => {
       <div className="meditation-audio">
         <h1>Meditation Audio</h1>
         <p>Meditation offers numerous benefits, including reduced stress, improved focus, and enhanced emotional well-being. It helps lower anxiety and fosters a positive outlook, while also improving sleep quality and boosting physical health. Our website supports these benefits by providing guided meditation sessions, mindfulness exercises, and relaxation techniques designed to fit seamlessly into daily life. With easy access to resources for stress management, self-awareness, and relationship enhancement, our platform makes it convenient for users to experience the profound advantages of regular meditation and personal growth.</p>
-        
+
         <div className="audio-control">
           <div className='audionames1'>
             <h3>Endless By Prabajithk</h3>
@@ -99,7 +102,7 @@ const Home = () => {
               <source src={meditationAudio} type="audio/mp3" />
             </audio>
           </div>
-          
+
           <div className="audionames2">
             <h3>Deep Relaxation Meditation</h3>
             <p>"Deep Relaxation Meditation features calming and soothing audio designed to guide listeners into a state of profound tranquility, helping to reduce stress, enhance focus, and achieve inner peace."</p>

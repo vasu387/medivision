@@ -1,0 +1,62 @@
+.zenup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+}
+
+.zenup-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 340px;
+}
+
+.zenup-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #d63031;
+}
+
+.zenup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.zenup-input {
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #fab1a0;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.zenup-button {
+  background-color: #d63031;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.zenup-button:hover {
+  background-color: #ff7675;
+}
+
+.zenup-note {
+  margin-top: 1rem;
+  color: #6c5ce7;
+}
+
+.zenup-link {
+  color: #d63031;
+  text-decoration: none;
+  font-weight: bold;
+}
